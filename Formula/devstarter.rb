@@ -1,26 +1,27 @@
 class Devstarter < Formula
-  desc "Quickly launch Node.js projects"
+  desc "Quickly launch Node.js projects from ~/Developer"
   homepage "https://github.com/dovatgabriel/devstarter"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/dovatgabriel/devstarter/releases/download/v0.1.0/devstarter-macos-x64-v0.1.0.tar.gz"
-      sha256 "32872aa03f2eacb7ef9ae025c9b66c0af72e424a9da4d3cc14ce9ed6a100cbc7"
+      url "https://github.com/dovatgabriel/devstarter/releases/download/v0.1.1/devstarter-macos-x64-v0.1.1.tar.gz"
+      sha256 "c22b4a3c566a79c0a7b6408cc884c8fd3432c028d3fc441e7fb5527bc30138bb"
     end
     on_arm do
-      url "https://github.com/dovatgabriel/devstarter/releases/download/v0.1.0/devstarter-macos-arm64-v0.1.0.tar.gz"
-      sha256 "b29ccec42b4b3a03ac5360e53bec5ccf4dcce62133554f2280d4253f605e87ab"
+      url "https://github.com/dovatgabriel/devstarter/releases/download/v0.1.1/devstarter-macos-arm64-v0.1.1.tar.gz"
+      sha256 "353e18530e5118d965f209787a17dea3d869cb7d96d74e29bc25794db39af1a8"
     end
   end
 
   def install
     if Hardware::CPU.intel?
       bin.install "devstarter-x64" => "devstarter"
+      bin.install_symlink bin/"devstarter" => "ds"
     else
       bin.install "devstarter-arm64" => "devstarter"
+      bin.install_symlink bin/"devstarter" => "ds"
     end
-    bin.install_symlink bin/"devstarter" => "ds"
   end
 
   test do
