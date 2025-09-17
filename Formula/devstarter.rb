@@ -1,15 +1,15 @@
 class Devstarter < Formula
   desc "Quickly launch Node.js projects from ~/Developer"
   homepage "https://github.com/dovatgabriel/devstarter"
-  version "1.0.0"
+  version "1.0.1"
   on_macos do
     on_intel do
-      url "https://github.com/dovatgabriel/devstarter/releases/download/v1.0.0/devstarter-macos-x64-v1.0.0.tar.gz"
-      sha256 "fb17059fd0c382828a18d75cfdc80b75be70e5dea7f41eda86e1a9ad35c298c6"
+      url "https://github.com/dovatgabriel/devstarter/releases/download/v1.0.1/devstarter-macos-x64-v1.0.1.tar.gz"
+      sha256 "da01445ccf114fb12e70b2f056d350ba5ffbdd465b72637af2fd8c28c38cd276"
     end
     on_arm do
-      url "https://github.com/dovatgabriel/devstarter/releases/download/v1.0.0/devstarter-macos-arm64-v1.0.0.tar.gz"
-      sha256 "f5847a740cb3b295e97a0c6593472266b82b8f26868b79043a6585235075ac56"
+      url "https://github.com/dovatgabriel/devstarter/releases/download/v1.0.1/devstarter-macos-arm64-v1.0.1.tar.gz"
+      sha256 "9228fcdb073876f855fa4a1b86b809d95b9916305b82b453fec85f516c7b63ad"
     end
   end
   def install
